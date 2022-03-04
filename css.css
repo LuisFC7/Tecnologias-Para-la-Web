@@ -1,0 +1,66 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --azulrela: #5798E7;
+    --gris: #B6BCC2;
+    --morado: #8142F7;
+}
+/*Elements are inside :root they are custom properties*/
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Exo 2', sans-serif;
+}
+/*We use 62.5% and 16px to convert the factor of size letters on devices
+1 rem= 10px, using rems responsive is easier*/
+
+.comienzo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.comienzo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    width: 120rem;
+    /*margin-top: 0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
+    or it could be in this way
+    */
+    margin:0 auto;
+    
+}
+/*estilos del div que incluye el nav*/
+.nav-bg{
+    background-color:var(--azulrela);
+}
+.barra-nav{
+  display: flex;
+  justify-content: space-between;
+}
+/*especificadores para estilos de enlaces de navegacion*/
+.barra-nav a{
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.barra-nav a:hover{
+    background-color: var(--gris);
+    color:var(--oscuro) ;
+}
+
+/*Aqui se declara media querie para uso del responsive*/
+@media(min-width:480px){
+    /*Se refiere al minimo de pantalla que se ejecutara(resolucion)*/
+     
+}
