@@ -1,0 +1,43 @@
+:root{
+    --fuente:'Nunito', sans-serif;
+}
+
+
+.inputs{
+    border-radius: 5px;
+    width: 20%;
+    height: 10%;
+    align-items: center;
+    font-family: var(--fuente);
+}
+
+.botones{
+    border-radius: 5px;
+    width: 10%;
+    height: 20%;
+    margin-bottom: 2rem;
+    font-family: var(--fuente);
+}
+
+.stabla{
+    border: black 3px solid;
+    text-align: center;
+}
+
+.imagenes{
+    width: 100px;
+    height: 100px;
+}
+
+.segundo{
+    margin-top: 2rem;
+}
+
+td,tr,th{
+    border: black 3px solid;
+    font-family: var(--fuente);
+}
+
+h2{
+    font-family: var(--fuente);
+}
