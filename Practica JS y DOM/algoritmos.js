@@ -99,7 +99,3 @@ function putimage(){
     tabla.setAttribute("border", "3", "black");
     
 }
-
-function comparar(){
-
-}
