@@ -57,6 +57,7 @@ class Stack{
 
     pop(){
         return this.stack.pop();
+        print();
     }
 
     peek(){
@@ -69,7 +70,7 @@ class Stack{
 
     print(){
         let y=10;
-        let x=20;
+        let x=70;
         let lar=this.stack.length;
         for(let i=lar; i>=0; i--){
             if(this.stack[i]===undefined){
@@ -103,6 +104,7 @@ function getPush(){
 
 function getpop(){
     p.pop();
+    getprint();
 }
 
 function getpeek(){
@@ -116,16 +118,15 @@ function getprint(){
 
 function escritura(textov,x,y){
     let c = document.getElementById("lienzo__canva");
+    let z=y+10;
     let contexto = c.getContext("2d");
     contexto.beginPath();
     contexto.strokeStyle="black";
     contexto.fillStyle="black";
     contexto.font="bold 20px arial";
     contexto.strokeText(textov,x,y);
-
-
-
-    /*cxt1.strokeStyle="blue"; //color externo
+    
+/*cxt1.strokeStyle="blue"; //color externo
 cxt1.fillStyle="red"; //color de relleno
 cxt1.font="bold 20px arial"; //estilo de texto
 cxt1.strokeText(texto,10,30); //texto con método stroke
@@ -138,6 +139,4 @@ function limpiar(){
     let c = document.getElementById("lienzo__canva");
     let contexto = c.getContext("2d");
     contexto.clearRect(0, 0, c.width, c.height);
-
-
 }
