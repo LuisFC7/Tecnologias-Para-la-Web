@@ -31,12 +31,9 @@ class Stack{
                 if(i==lar-1 && num==1){
                     y=y+20;
                     escritura2(this.stack[i],x,y);
-                    likeUnlikePost2();
-                    
                 }else{
                     y=y+20;
                     escritura(this.stack[i],x,y);
-                    likeUnlikePost();
                 }
             }        
         }   
@@ -47,6 +44,7 @@ let p = new Stack();
 
 function getPush(){
     let dato=prompt('Ingresa un numero: ');
+    limpiar();
     p.push(dato);
     let num=0;
     getprint(num);
@@ -54,6 +52,7 @@ function getPush(){
 
 function getpop(){
     let num=0;
+    limpiar();
     p.pop();
     getprint(num);
 }
@@ -61,23 +60,39 @@ function getpop(){
 function getpeek(){
     console.log(p.peek());
     let num=1;
+    limpiar();
     getprint(num);
 }
 
 function getprint(num){
-    limpiar();
-    fondo();
+    //limpiar();
     p.print(num);   
 }
 
 function escritura(textov,x,y){
+    /*let tabla=document.createElement('table');
+    let btabla=document.createElement('tbody');
+    let tr=document.createElement('tr');
+    let th=document.createElement('th');
+    let tt;*/
+    //aqui añadir tabla
     let c = document.getElementById("lienzo__canva");
+    let z=y+10;
     let contexto = c.getContext("2d");
     contexto.beginPath();
     contexto.fillStyle="black";
     contexto.font="bold 20px arial";
     contexto.textAlign="center";
     contexto.fillText(textov, x,y);
+    //let ttexto=document.createTextNode(contexto.fillText(textov, x,y)); 
+    /*th.appendChild(ttexto);
+    tr.appendChild(th);
+    btabla.appendChild(tr);
+    tabla.appendChild(btabla);
+    c.appendChild(tabla);
+
+    tabla.classList.add("stabla");
+    tabla.setAttribute("border", "3", "black"); */
 }
 
 function escritura2(textov,x,y){
@@ -94,44 +109,4 @@ function limpiar(){
     let c = document.getElementById("lienzo__canva");
     let contexto = c.getContext("2d");
     contexto.clearRect(0, 0, c.width, c.height);
-}
-
-function fondo(){
-    let colores=["#ECB9E9","#B9ECE7","#E1F8BB"];
-    let c = document.getElementById("lienzo__canva");
-    let contexto = c.getContext("2d");
-    contexto.beginPath();
-    grad2=contexto.createRadialGradient(0,0,60,-150,150,280); //gradiente1
-    grad2.addColorStop(0,colores[0]); //color punto inicial
-    grad2.addColorStop(0.5,colores[1]); //color punto medio
-    grad2.addColorStop(1,colores[2]); //color punto final
-    contexto.fillStyle=grad2; //estilo de color=gradiente
-    contexto.fillRect(0,0,150,300); //dibujo rectángulo
-}
-
-
-const figura=document.getElementById('figura');
-const figura2=document.getElementById('figura2');
-
-const likeUnlikePost=function(){
-    if(figura.classList.contains('like')){
-        figura.classList.remove('like');
-        figura.classList.add('unlike');
-    }else{
-        figura.classList.remove('unlike');
-        figura.classList.add('like');
-    
-        }
-}
-
-
-const likeUnlikePost2=function(){
-    if(figura2.classList.contains('like2')){
-        figura2.classList.remove('like2');
-        figura2.classList.add('unlike2');
-    }else{
-        figura2.classList.remove('unlike2');
-        figura2.classList.add('like2');
-    
-        }
 }

@@ -1,5 +1,177 @@
+:root{
+  --fuentep:'Caveat', cursive;
+  --fuenteb:'Radio Canada', sans-serif;
+
+}
+
+.botones{
+  border-radius: 5px;
+  width: 90%;
+  height: 20%;
+  margin-bottom: 2rem;
+  font-family: var(--fuenteb);
+}
+
+.canva__tt{
+  font-family: var(--fuentep);
+  border-radius: 10px;
+  font-size: 16px;
+
+}
+
 .contenedor{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.contenedor__canva{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.stabla{
+    border: black 3px solid;
+    text-align: center;
+}
+
+
+/*//Animaciones para push//*/
+
+#figura{
+  width: 70px;
+  stroke: cornflowerblue;
+  fill: darkgray;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 5;
+}
+
+#figura.like{
+  animation: 3s ease-in forwards like,
+  0.8s linear 2s 2 forwards pulso;
+}
+
+#figura.unlike{
+  animation: 2s ease-out forwards unlike;
+
+}
+
+@keyframes like{
+  0%{
+    stroke-dashoffset: 64;
+    fill:darkgray;
+  }
+
+  70%{
+    stroke-dashoffset: 0;
+    fill: darkgray;
+  }
+  100%
+  {
+    stroke-dashoffset: 0;
+    fill:chartreuse;
+  }
+}
+
+@keyframes unlike{
+  0%{
+    stroke-dashoffset: 0;
+    fill:chartreuse;
+  }
+
+  30%{
+    stroke-dashoffset: 0;
+    fill: darkgray;
+  }
+  100%
+  {
+    stroke-dashoffset: 64;
+    fill:darkgray;
+  }
+}
+
+@keyframes pulso{
+  0%{
+    transform: scale(1,1);
+  }
+
+  50%{
+    transform: scale(0.8,0.8);
+  }
+  100%
+  {
+    transform:scale(1,1);
+  }
+}
+
+/*//Animaciones para pop//*/
+
+
+#figura2{
+  width: 70px;
+  stroke: rgb(255, 0, 0);
+  fill: darkgray;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 5;
+}
+
+#figura2.like2{
+  animation: 3s ease-in forwards like,
+  0.8s linear 2s 2 forwards pulso;
+}
+
+#figura2.unlike2{
+  animation: 2s ease-out forwards unlike;
+
+}
+
+@keyframes like2{
+  0%{
+    stroke-dashoffset: 64;
+    fill:darkgray;
+  }
+
+  70%{
+    stroke-dashoffset: 0;
+    fill: darkgray;
+  }
+  100%
+  {
+    stroke-dashoffset: 0;
+    fill:rgb(255, 0, 0);
+  }
+}
+
+@keyframes unlike2{
+  0%{
+    stroke-dashoffset: 0;
+    fill:rgb(255, 0, 0);
+  }
+
+  30%{
+    stroke-dashoffset: 0;
+    fill: darkgray;
+  }
+  100%
+  {
+    stroke-dashoffset: 64;
+    fill:darkgray;
+  }
+}
+
+@keyframes pulso2{
+  0%{
+    transform: scale(1,1);
+  }
+
+  50%{
+    transform: scale(0.8,0.8);
+  }
+  100%
+  {
+    transform:scale(1,1);
+  }
 }

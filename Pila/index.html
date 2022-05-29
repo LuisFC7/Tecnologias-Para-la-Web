@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Radio+Canada&display=swap" rel="stylesheet">
     <title>Pila</title>
 </head>
 <body>
     <div class="contenedor">
         <div class="contenedor__botones">
-            <input id="push" type="button" value="PUSH" onclick="getPush();">
-            <input type="button" value="POP" onclick="getpop();">
-            <input id="peek" type="button" value="VER TOPE" onclick="getpeek();">
+            <input class="botones" id="push" type="button" value="PUSH" onclick="getPush();">
+            <input class="botones" type="button" value="POP" onclick="getpop();">
+            <input class="botones" id="peek" type="button" value="VER TOPE" onclick="getpeek();">
         </div>
 
         <div class="contenedor__canva">
-            <canvas id="lienzo__canva" width="150px" height="200px" style="border: 2px solid" ></canvas>
+            <canvas  class="canva_tt" id="lienzo__canva" width="150px" height="260px" style="border: 2px solid" ></canvas>
+            <svg id="figura" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+
+            <svg id="figura2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+
+
         </div>
     </div>
     <script src="pila.js"> </script>
